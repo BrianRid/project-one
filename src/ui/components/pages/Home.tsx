@@ -12,8 +12,8 @@ import { ReactComponent as IconStorageSvg } from "ui/assets/svg/IconStorage.svg"
 import { Card as OnyxiaUiCard } from "onyxia-ui/Card";
 import type { Link } from "type-route";
 import onyxiaNeumorphismDarkModeUrl from "ui/assets/svg/OnyxiaNeumorphismDarkMode.svg";
-import onyxiaNeumorphismLightModeUrl from "ui/assets/svg/OnyxiaNeumorphismLightMode.svg";
-import homeIllustrationImgUrl from "ui/assets/img/homeIllustration.png";
+import onyxiaNeumorphismLightModeUrl from "ui/assets/img/wavebackground.png";
+import homeIllustrationImgUrl from "ui/assets/img/home.png";
 import { getIsHomePageDisabled } from "ui/env";
 import { useConst } from "powerhooks/useConst";
 import { useStateRef } from "powerhooks/useStateRef";
@@ -51,25 +51,38 @@ export function Home(props: Props) {
         <div className={cx(classes.root, className)}>
             <div className={classes.hero}>
                 <div className={classes.heroTextWrapper}>
-                    <OnyxiaLogoSvg className={classes.svg} />
-                    <Text typo="display heading">
-                        {isUserLoggedIn
-                            ? t("welcome", {
-                                  "who":
-                                      userAuthenticationThunks.getUser().firstName ?? "",
-                              })
-                            : t("title")}
-                    </Text>
-                    <Text typo="subtitle" className={classes.heroSubtitle}>
-                        {t("subtitle")}
-                    </Text>
-                    {!isUserLoggedIn ? (
-                        <Button onClick={userAuthenticationThunks.login}>
+                    <div className={classes.textWrap}>
+                        <Text typo="display heading">
+                            {isUserLoggedIn
+                                ? t("welcome", {
+                                      "who":
+                                          userAuthenticationThunks.getUser().firstName ??
+                                          "",
+                                  })
+                                : t("title")}
+                        </Text>
+                        <div>
+                            <Text typo="subtitle" className={classes.heroSubtitleBold}>
+                                {t("bold_subtitle")}
+                            </Text>
+                            <Text typo="subtitle" className={classes.heroSubtitle}>
+                                {t("subtitle")}
+                            </Text>
+                            <Text typo="subtitle" className={classes.heroSubtitle}>
+                                Projet régional d’appui au renforcement des statistiques
+                                de l’économie numérique et d’accompagnement à
+                                l’utilisation de la science des données par les
+                                administrations fiscales et douanières
+                            </Text>
+                        </div>
+                        <Button
+                            className={classes.button}
+                            onClick={userAuthenticationThunks.login}
+                        >
                             {t("login")}
                         </Button>
-                    ) : (
-                        <Button href="https://docs.sspcloud.fr/">{t("new user")}</Button>
-                    )}
+                    </div>
+                    <img src={homeIllustrationImgUrl} className={classes.image} />
                 </div>
             </div>
             <div className={classes.cardsWrapper}>
@@ -80,7 +93,7 @@ export function Home(props: Props) {
                     buttonText={t("cardButton1")}
                     link={catalogExplorerLink}
                 />
-                <Card
+                {/* <Card
                     className={classes.middleCard}
                     Icon={IconCommunitySvg}
                     title={t("cardTitle2")}
@@ -89,7 +102,7 @@ export function Home(props: Props) {
                     link={
                         "https://tchap.gouv.fr/#/room/#SSPCloudXDpAw6v:agent.finances.tchap.gouv.fr"
                     }
-                />
+                /> */}
                 <Card
                     Icon={IconStorageSvg}
                     title={t("cardTitle3")}
@@ -108,6 +121,7 @@ export const { i18n } = declareComponentKeys<
     | "new user"
     | "title"
     | "subtitle"
+    | "bold_subtitle"
     | "cardTitle1"
     | "cardTitle2"
     | "cardTitle3"
@@ -123,46 +137,71 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
     "root": {
         "height": "100%",
         "overflow": "auto",
-        "backgroundColor": "transparent",
         "display": "flex",
         "flexDirection": "column",
     },
     "hero": {
         "flex": 1,
-        "backgroundImage": `url(${homeIllustrationImgUrl}), url(${
-            theme.isDarkModeEnabled
-                ? onyxiaNeumorphismDarkModeUrl
-                : onyxiaNeumorphismLightModeUrl
-        })`,
-        "backgroundPosition": "171% 38%, 100% 0%",
+        "backgroundImage": `url(${onyxiaNeumorphismLightModeUrl})`,
+        "backgroundPosition": "0% 0%, 0% 0%",
         "backgroundRepeat": "no-repeat, no-repeat",
-        "backgroundSize": "76%, 80%",
+        "backgroundSize": "150%, 110%",
     },
     "heroTextWrapper": {
+        "height": "100%",
         "paddingLeft": theme.spacing(3),
         "maxWidth": "42%",
         "& > *": {
             "marginBottom": theme.spacing(4),
         },
+        "justifyContent": "space-between",
     },
     "heroSubtitle": {
-        "marginBottom": theme.spacing(5),
+        "fontSize": "1rem",
+        "&: last-child": {
+            "marginBottom": theme.spacing(5),
+        },
+    },
+    heroSubtitleBold: {
+        "marginTop": theme.spacing(5),
+        "fontWeight": "bold",
+        "fontSize": "1rem",
     },
     "cardsWrapper": {
         "borderTop": `1px solid ${theme.colors.useCases.typography.textPrimary}`,
         "display": "flex",
-        ...theme.spacing.topBottom("padding", 4),
+        "zIndex": 1,
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        justifyContent: "space-between",
+        // ...theme.spacing.topBottom("padding", 4),
         "& > *": {
             "flex": 1,
         },
     },
-    "middleCard": {
-        ...theme.spacing.rightLeft("margin", 3),
+    "image": {
+        "position": "absolute",
+        "zIndex": 0,
+        "bottom": "25%",
+        "right": -150,
+        "width": 850,
     },
-    "svg": {
-        "fill": theme.colors.useCases.typography.textFocus,
-        "width": 122,
+    "textWrap": {
+        "height": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "space-around",
     },
+    "button": {
+        "width": "20%",
+    },
+    // "middleCard": {
+    //     ...theme.spacing.rightLeft("margin", 3),
+    // },
+    // "svg": {
+    //     "fill": theme.colors.useCases.typography.textFocus,
+    //     "width": 122,
+    // },
 }));
 
 const { Card } = (() => {
@@ -202,6 +241,7 @@ const { Card } = (() => {
                         "display": "flex",
                         "flexDirection": "column",
                         "padding": theme.spacing(4),
+                        "margin": theme.spacing(3),
                         "backgroundColor": theme.isDarkModeEnabled
                             ? "#383E50"
                             : undefined,

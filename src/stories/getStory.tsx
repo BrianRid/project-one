@@ -105,7 +105,7 @@ export function getStoryFactory<Props>(params: {
         const { setIsDarkModeEnabled } = useIsDarkModeEnabled();
 
         useEffect(() => {
-            setIsDarkModeEnabled(darkMode);
+            setIsDarkModeEnabled(false);
         }, [darkMode]);
 
         const { setLang } = useLang();

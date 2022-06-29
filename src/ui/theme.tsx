@@ -105,6 +105,9 @@ const { ThemeProvider, useTheme } = createThemeProvider({
             "light": "#2E94FA",
             "lighter": "#E5EDF5",
         },
+        "custom": {
+            "main": "#FFF7DF",
+        },
     },
 });
 

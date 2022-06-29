@@ -26,7 +26,6 @@ export const Footer = memo((props: Props) => {
 
     return (
         <footer className={cx(classes.root, className)}>
-            <Text typo="body 2">2017 - 2022 Onyxia, InseefrLab</Text>
             {spacing}
             <a
                 href={contributeUrl}
@@ -39,30 +38,9 @@ export const Footer = memo((props: Props) => {
                 <Text typo="body 2">{t("contribute")}</Text>
             </a>
             <div className={classes.sep} />
-            <LanguageSelect
-                language={lang}
-                onLanguageChange={setLang}
-                variant="small"
-                changeLanguageText={t("change language")}
-            />
+            <Text typo="body 2">2022 - DATAFID</Text>
             {spacing}
-            {tosUrl !== undefined && (
-                <>
-                    <a href={tosUrl} target="_blank" rel="noreferrer">
-                        {" "}
-                        <Text typo="body 2">{t("terms of service")}</Text>{" "}
-                    </a>
-                    {spacing}
-                </>
-            )}
-            <a
-                href={`https://github.com/InseeFrLab/onyxia-web/tree/v${packageJsonVersion}`}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <Text typo="body 2">v{packageJsonVersion} </Text>
-            </a>
-            {spacing}
+            <Text typo="body 2">2017 - 2022 Onyxia, InseefrLab</Text>
             <DarkModeSwitch size="extra small" className={classes.darkModeSwitch} />
         </footer>
     );
@@ -74,7 +52,7 @@ export const { i18n } = declareComponentKeys<
 
 const useStyles = makeStyles<Props>({ "name": { Footer } })(theme => ({
     "root": {
-        "backgroundColor": theme.colors.useCases.surfaces.background,
+        "backgroundColor": theme.colors.palette.custom.main,
         "display": "flex",
         "alignItems": "center",
         "& a:hover": {

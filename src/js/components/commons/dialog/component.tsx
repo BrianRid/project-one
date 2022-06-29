@@ -8,6 +8,7 @@ interface Props {
     open: boolean;
     title: string;
     subtitle?: string;
+    bold_subtitle?: string;
     body?: string;
     warn?: string;
     onValid: () => void;

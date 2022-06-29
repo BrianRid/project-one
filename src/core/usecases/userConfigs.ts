@@ -129,9 +129,7 @@ export const privateThunks = {
                 {
                     secretsManagerClient,
                     oidcClient,
-                    createStoreParams: {
-                        getIsDarkModeEnabledValueForProfileInitialization,
-                    },
+                    createStoreParams: {},
                 },
             ] = args;
 
@@ -147,7 +145,7 @@ export const privateThunks = {
                 "gitCredentialCacheDuration": 0,
                 "isBetaModeEnabled": false,
                 "isDevModeEnabled": false,
-                "isDarkModeEnabled": getIsDarkModeEnabledValueForProfileInitialization(),
+                "isDarkModeEnabled": false,
                 "deploymentRegionId": null,
                 "githubPersonalAccessToken": null,
                 "doDisplayMySecretsUseInServiceDialog": true,

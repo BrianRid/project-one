@@ -60,10 +60,10 @@ export const Header = memo((props: Props) => {
             <div onClick={onLogoClick} className={classes.mainTextContainer}>
                 {doShowOnyxia && (
                     <Text typo="section heading" className={css({ "fontWeight": 600 })}>
-                        Onyxia -
+                        DATALAB - DATAFID - inspiré d'Onyxia
                     </Text>
                 )}
-                {HEADER_ORGANIZATION && (
+                {/* {HEADER_ORGANIZATION && (
                     <Text
                         typo="section heading"
                         className={cx(css({ ...theme.spacing.rightLeft("margin", 2) }), {
@@ -72,8 +72,8 @@ export const Header = memo((props: Props) => {
                     >
                         {HEADER_ORGANIZATION}
                     </Text>
-                )}
-                {theme.windowInnerWidth > 450 && HEADER_USECASE_DESCRIPTION && (
+                )} */}
+                {/* {theme.windowInnerWidth > 450 && HEADER_USECASE_DESCRIPTION && (
                     <Text
                         typo="section heading"
                         className={css({ "fontWeight": 500 })}
@@ -81,7 +81,7 @@ export const Header = memo((props: Props) => {
                     >
                         {HEADER_USECASE_DESCRIPTION}
                     </Text>
-                )}
+                )} */}
             </div>
             {props.useCase === "core app" && props.isUserLoggedIn && (
                 <ProjectSelect {...props} className={classes.projectSelect} />
@@ -140,7 +140,7 @@ export const { i18n } = declareComponentKeys<
 const useStyles = makeStyles<{ logoContainerWidth: number }>({ "name": { Header } })(
     (theme, { logoContainerWidth }) => ({
         "root": {
-            "backgroundColor": theme.colors.useCases.surfaces.background,
+            // "backgroundColor": theme.colors.palette.custom.main,
             "overflow": "auto",
             "display": "flex",
             "alignItems": "center",

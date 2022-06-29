@@ -42,7 +42,7 @@ const useStyles = makeStyles<{
         "height": "100vh",
         "display": "flex",
         "flexDirection": "column",
-        "backgroundColor": theme.colors.useCases.surfaces.background,
+        "backgroundColor": theme.colors.palette.custom.main,
     },
 
     "header": {
@@ -53,11 +53,11 @@ const useStyles = makeStyles<{
     "betweenHeaderAndFooter": {
         "flex": 1,
         "overflow": "hidden",
-        "backgroundImage": `url( ${
-            theme.isDarkModeEnabled
-                ? onyxiaNeumorphismDarkModeUrl
-                : onyxiaNeumorphismLightModeUrl
-        })`,
+        // "backgroundImage": `url( ${
+        //     theme.isDarkModeEnabled
+        //         ? onyxiaNeumorphismDarkModeUrl
+        //         : onyxiaNeumorphismLightModeUrl
+        // })`,
         "backgroundSize": "auto 90%",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat",

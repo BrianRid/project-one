@@ -146,14 +146,14 @@ export const {
             },
             "AccountIntegrationsTab": {
                 "git section title": "Git configuration",
-                "git section helper": `To ensure that you appear from your services 
+                "git section helper": `To ensure that you appear from your services
             as the author of Git contributions`,
                 "gitName": "Username for Git",
                 "gitEmail": "Email for Git",
                 "third party tokens section title":
                     "Connect your Gitlab, Github and Kaggle accounts",
                 "third party tokens section helper": `
-                Connect your services to external accounts using 
+                Connect your services to external accounts using
                 personal access tokens and environment variables
             `,
                 "personal token": ({ serviceName }) =>
@@ -190,7 +190,7 @@ export const {
                 "language": "Change language",
                 "s3 scripts": "Init script",
                 "service password": "Password for your services",
-                "service password helper text": `This password is required to log in to all of your services. 
+                "service password helper text": `This password is required to log in to all of your services.
             It is generated automatically and renews itself regularly.`,
                 "not yet defined": "Not yet defined",
                 "reset helper dialogs": "Reset instructions windows",
@@ -260,8 +260,8 @@ export const {
                 "value column name": "Value",
                 "resolved value column name": "Resolved Value",
                 "what's a resolved value": `
-            An environnement variable can reference another one. If for example you have defined 
-            FIRST_NAME=John you can set FULL_NAME="$FIRST_NAME"-Doe, the resolved value of 
+            An environnement variable can reference another one. If for example you have defined
+            FIRST_NAME=John you can set FULL_NAME="$FIRST_NAME"-Doe, the resolved value of
             FILL_NAME will be «John-Doe»
             `,
                 "unavailable key": "Already used",
@@ -275,7 +275,7 @@ export const {
                 "use secret dialog subtitle": "The path of the secret have been copied",
                 "use secret dialog body": `
                 When you launch a service (RStudio, Jupyter, ect) go to the
-                secret tab and and paste the path of the secret provided for this 
+                secret tab and and paste the path of the secret provided for this
                 purpose.
                 The values will be injected as environnement variable.
             `,
@@ -328,6 +328,7 @@ export const {
                 "title": "Welcome to the Onyxia datalab",
                 "new user": "New to the datalab?",
                 "login": "Login",
+                "bold_subtitle": "",
                 "subtitle":
                     "Work with Python or R, enjoy all the computing power you need!",
                 "cardTitle1": "An ergonomic environment and on-demand services",
@@ -504,7 +505,7 @@ export const {
                 "change account info":
                     "Modifier les informations du compte (comme, par exemple, votre mot de passe)",
                 "auth information": "Informations d'authentification Onyxia",
-                "auth information helper": `Ces informations vous permettent de vous identifier 
+                "auth information helper": `Ces informations vous permettent de vous identifier
             au sein de la plateforme et des différents services.`,
                 "ip address": "Adresse IP",
             },
@@ -553,7 +554,7 @@ export const {
                 "language": "Changer la langue",
                 "s3 scripts": "Script d'initialisation",
                 "service password": "Mot de passe pour vos services",
-                "service password helper text": `Ce mot de passe est nécessaire pour vous connecter à tous vos services. 
+                "service password helper text": `Ce mot de passe est nécessaire pour vous connecter à tous vos services.
             Il est généré automatiquement et se renouvelle régulièrement.`,
                 "not yet defined": "Non définie",
                 "reset helper dialogs": "Réinitialiser les fenêtres d'instructions",
@@ -605,7 +606,7 @@ export const {
                 "deletion dialog title": ({ deleteWhat }) =>
                     `Supprimer un ${deleteWhat} ?`,
                 "deletion dialog body": ({ deleteWhat }) => `
-            Vous êtes sur le point de supprimer un ${deleteWhat}. 
+            Vous êtes sur le point de supprimer un ${deleteWhat}.
             Cette action entraînera la perte potentielle des données liées à ce ${deleteWhat}.
             `,
                 "already a directory with this name":
@@ -695,8 +696,9 @@ export const {
                 "title": "Bienvenue sur le datalab",
                 "login": "Connexion",
                 "new user": "Nouvel utilisateur du datalab?",
+                "bold_subtitle": "Tirez toute la valeur de vos données.",
                 "subtitle":
-                    "Travaillez avec Python ou R et disposez de la puissance dont vous avez besoin!",
+                    "Travaillez vos données et disposez de la puissance dont vous avez besoin.",
                 "cardTitle1": "Un environnement ergonomique et des services à la demande",
                 "cardTitle2": "Une communauté active et enthousiaste à votre écoute",
                 "cardTitle3":
@@ -720,7 +722,7 @@ export const {
                 "no service found": "Service non trouvé",
                 "no result found": ({ forWhat }) =>
                     `Aucun résultat trouvé pour ${forWhat}`,
-                "check spelling": `Vérifiez que le nom du service est correctement 
+                "check spelling": `Vérifiez que le nom du service est correctement
             orthographié ou essayez d'élargir votre recherche.`,
                 "go back": "Retourner aux principaux services",
                 "main services": "Principaux services",
@@ -1046,6 +1048,7 @@ export const {
                 "title": "欢迎来到 datalab",
                 "login": "登录",
                 "new user": "您是datalab的新用户?",
+                "bold_subtitle": "",
                 "subtitle":
                     "我们支持 Python 或 R，并为您提供各种数据服务和您需要的所有计算能力!",
                 "cardTitle1": "灵活的工作环境和按需分配的服务",
