@@ -60,7 +60,7 @@ export const Header = memo((props: Props) => {
             <div onClick={onLogoClick} className={classes.mainTextContainer}>
                 {doShowOnyxia && (
                     <Text typo="section heading" className={css({ "fontWeight": 600 })}>
-                        DATALAB - DATAFID - inspiré d'Onyxia
+                        DATALAB - ONYXIA
                     </Text>
                 )}
                 {/* {HEADER_ORGANIZATION && (

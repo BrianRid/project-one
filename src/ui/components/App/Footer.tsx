@@ -40,7 +40,7 @@ export const Footer = memo((props: Props) => {
             <div className={classes.sep} />
             <Text typo="body 2">2022 - DATAFID</Text>
             {spacing}
-            <Text typo="body 2">2017 - 2022 Onyxia, InseefrLab</Text>
+            <Text typo="body 2">2017 - 2022 Onyxia</Text>
             <DarkModeSwitch size="extra small" className={classes.darkModeSwitch} />
         </footer>
     );
