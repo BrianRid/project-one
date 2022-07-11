@@ -239,9 +239,9 @@ export const MyServicesCard = memo((props: Props) => {
                     {onRequestDelete !== undefined && (
                         <IconButton iconId="delete" onClick={onRequestDelete} />
                     )}
-                    {monitoringUrl !== undefined && (
+                    {/* {monitoringUrl !== undefined && (
                         <IconButton iconId="equalizer" href={monitoringUrl} />
-                    )}
+                    )} */}
                     {onRequestShowPostInstallInstructions !== undefined && (
                         <Button
                             onClick={onRequestShowPostInstallInstructions}

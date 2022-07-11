@@ -66,9 +66,12 @@ export const Header = memo((props: Props) => {
                 {/* {HEADER_ORGANIZATION && (
                     <Text
                         typo="section heading"
-                        className={cx(css({ ...theme.spacing.rightLeft("margin", 2) }), {
-                            [css({ "marginLeft": 0 })]: !doShowOnyxia,
-                        })}
+                        className={cx(
+                            css({ ...theme.spacing.rightLeft("margin", 2), "zIndex": 1 }),
+                            {
+                                [css({ "marginLeft": 0, "zIndex": 1 })]: !doShowOnyxia,
+                            },
+                        )}
                     >
                         {HEADER_ORGANIZATION}
                     </Text>
@@ -122,7 +125,10 @@ export const Header = memo((props: Props) => {
                                     : props.onLoginClick
                             }
                             variant={props.isUserLoggedIn ? "secondary" : "primary"}
-                            className={css({ "marginLeft": theme.spacing(3) })}
+                            className={css({
+                                "marginLeft": theme.spacing(3),
+                                "zIndex": 1,
+                            })}
                         >
                             {t(props.isUserLoggedIn ? "logout" : "login")}
                         </Button>
@@ -155,6 +161,7 @@ const useStyles = makeStyles<{ logoContainerWidth: number }>({ "name": { Header 
             "justifyContent": "center",
         },
         "mainTextContainer": {
+            "zIndex": 1,
             "cursor": "pointer",
             "& > *": {
                 "display": "inline",
@@ -166,6 +173,7 @@ const useStyles = makeStyles<{ logoContainerWidth: number }>({ "name": { Header 
         },
         "button": {
             "marginBottom": theme.spacing(1),
+            "zIndex": 1,
         },
         "rightEndActionsContainer": {
             "flex": 1,
