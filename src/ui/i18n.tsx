@@ -669,7 +669,7 @@ export const {
             "Header": {
                 "login": "Connexion",
                 "logout": "Déconnexion",
-                "trainings": "Formations",
+                "trainings": "Formations (Beta)",
                 "documentation": "Documentation",
                 "project": "Projet",
             },

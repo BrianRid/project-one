@@ -20,7 +20,7 @@ export const Footer = memo((props: Props) => {
 
     const { t } = useTranslation({ Footer });
 
-    const { lang, setLang } = useLang();
+    // const { lang, setLang } = useLang();
 
     const spacing = <div className={classes.spacing} />;
 
@@ -38,6 +38,15 @@ export const Footer = memo((props: Props) => {
                 <Text typo="body 2">{t("contribute")}</Text>
             </a>
             <div className={classes.sep} />
+            <a
+                href={"https://docs.sspcloud.fr/onyxia-guide/premiere-utilisation"}
+                className={classes.contribute}
+                rel="noreferrer"
+                target="_blank"
+            >
+                <Text typo="body 2">Documentation</Text>
+            </a>
+            {spacing}
             <Text typo="body 2">2022 - DATAFID</Text>
             {spacing}
             <Text typo="body 2">2017 - 2022 Onyxia</Text>
